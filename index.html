@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart home||Light</title>
+    <link rel="stylesheet" href="indx.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <nav>
+<div class="logo">
+    <h1>SMART</h1><p>Home</p>
+</div>
+<div class="set">
+    <a href="#"><i class="fa-solid fa-sun"></i><span>  </span>Settings</a>
+</div>
+<div class="more">
+    <a href="#">Advanced</a>
+    <a href="#">Other control</a>
+    <a href="#">Help</a>
+</div>
+
+        </nav>
+        <div class="bodyy">
+            <h1>WELCOME TO SMART HOME SYSTEM</h1><br>
+            <p>This system allow you to control your house remotely everywhere in case wifi connections available.The home page is used to control the house lighting system. <span style="padding-left:100px;">It is also available to controll other systems in the links above.</span></p>
+       <div class="con">
+        <h2>Control light</h2>
+        <div class="sunc">
+            
+            <div class="left"><i id="icon" class="fa-solid fa-sun"></i></div>
+            <div class="on"><span style="color:#333; font-size:20px;margin-top:20px;">ON/OFF<br>Control</span></div>
+        </div>
+       </div>
+        </div>
+    </div>
+</body>
+<script>
+    const icon = document.getElementById('icon');
+
+    icon.addEventListener('click', function() {
+        // Check if the icon is already on the left side
+        if (icon.style.left === '10px') {
+            // Move the icon back to the right side
+            icon.style.left = 'auto';
+            icon.style.right = '400px';
+            // Change the color back to white
+            icon.style.color = 'white';
+            fetch('off.php')
+        } else {
+            // Move the icon to the left side
+            icon.style.right = 'auto';
+            icon.style.left = '10px';
+            // Change the color to yellow
+            icon.style.color = 'yellow';
+            
+            fetch('on.php')
+        }
+    });
+</script>
+</html>
