@@ -2,9 +2,9 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266HTTPClient.h>
- const char* ssid = "";
- const char* password = "";
- const char* serverName = "http://192.168.240.67/tutorial/start.php";
+ const char* ssid = ""; /*wifi name*/
+ const char* password = ""; /*passworf*/
+ const char* serverName = "http:/ /*IP Address*//tutorial/start.php";
  const int ledPin = D1;
  const int buzzer = D3;
  const int ledgreen = D2;
@@ -58,6 +58,7 @@ void loop() {
           digitalWrite(ledgreen, LOW);
           Serial.println("Light is off");
         }}
+     while (1);
         else{
           Serial.println("Error in http request");
           }
